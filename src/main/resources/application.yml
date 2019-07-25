@@ -1,0 +1,23 @@
+micronaut:
+  application:
+    name: sample-micronaut-jpa
+
+jackson:
+  bean-introspection-module: true
+
+datasources:
+  default:
+    url: jdbc:postgresql://192.168.99.100:5432/predator?ssl=false
+    driverClassName: org.postgresql.Driver
+    username: predator
+    password: predator123
+#    schema-generate: CREATE_DROP
+#    dialect: H2
+
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        show_sql: true
