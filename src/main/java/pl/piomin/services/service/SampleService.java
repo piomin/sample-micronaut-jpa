@@ -1,6 +1,5 @@
 package pl.piomin.services.service;
 
-import io.micronaut.spring.tx.annotation.Transactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pl.piomin.services.domain.Department;
@@ -9,10 +8,10 @@ import pl.piomin.services.domain.Employment;
 import pl.piomin.services.repository.DepartmentRepository;
 import pl.piomin.services.repository.EmployeeRepository;
 import pl.piomin.services.repository.EmploymentRepository;
-import pl.piomin.services.repository.OrganizationRepository;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
+import javax.transaction.Transactional;
 import java.util.Date;
 import java.util.Optional;
 
