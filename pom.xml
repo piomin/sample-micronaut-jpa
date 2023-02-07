@@ -99,7 +99,7 @@
         <dependency>
             <groupId>io.micronaut.test</groupId>
             <artifactId>micronaut-test-core</artifactId>
-            <version>1.2.3</version>
+            <version>3.8.2</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
