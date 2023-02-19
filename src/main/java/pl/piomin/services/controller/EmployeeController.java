@@ -1,6 +1,7 @@
 package pl.piomin.services.controller;
 
 import io.micronaut.http.annotation.*;
+import jakarta.inject.Inject;
 import pl.piomin.services.domain.ChangeJobRequest;
 import pl.piomin.services.domain.Employee;
 import pl.piomin.services.domain.Organization;
@@ -9,7 +10,6 @@ import pl.piomin.services.repository.EmployeeRepository;
 import pl.piomin.services.repository.OrganizationRepository;
 import pl.piomin.services.service.SampleService;
 
-import javax.inject.Inject;
 import java.util.Optional;
 import java.util.Set;
 

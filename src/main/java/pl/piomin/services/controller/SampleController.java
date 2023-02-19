@@ -4,6 +4,7 @@ import io.micronaut.http.annotation.Body;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.Post;
+import jakarta.inject.Inject;
 import pl.piomin.services.domain.ChangeJobRequest;
 import pl.piomin.services.domain.Department;
 import pl.piomin.services.domain.Employee;
@@ -13,7 +14,6 @@ import pl.piomin.services.repository.EmployeeRepository;
 import pl.piomin.services.repository.OrganizationRepository;
 import pl.piomin.services.service.SampleService;
 
-import javax.inject.Inject;
 import javax.validation.constraints.NotNull;
 import java.util.Optional;
 

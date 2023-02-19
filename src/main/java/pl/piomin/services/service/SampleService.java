@@ -1,5 +1,7 @@
 package pl.piomin.services.service;
 
+import jakarta.inject.Inject;
+import jakarta.inject.Singleton;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pl.piomin.services.domain.Department;
@@ -9,8 +11,6 @@ import pl.piomin.services.repository.DepartmentRepository;
 import pl.piomin.services.repository.EmployeeRepository;
 import pl.piomin.services.repository.EmploymentRepository;
 
-import javax.inject.Inject;
-import javax.inject.Singleton;
 import javax.transaction.Transactional;
 import java.util.Date;
 import java.util.Optional;
