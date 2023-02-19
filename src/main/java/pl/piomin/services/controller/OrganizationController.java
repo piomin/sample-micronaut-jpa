@@ -4,10 +4,10 @@ import io.micronaut.http.annotation.Body;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.Post;
+import jakarta.inject.Inject;
 import pl.piomin.services.domain.Organization;
 import pl.piomin.services.repository.OrganizationRepository;
 
-import javax.inject.Inject;
 import javax.validation.constraints.NotNull;
 import java.util.Optional;
 

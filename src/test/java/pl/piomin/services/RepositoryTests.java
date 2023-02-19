@@ -1,8 +1,12 @@
 package pl.piomin.services;
 
-import io.micronaut.test.annotation.MicronautTest;
+import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
+import jakarta.inject.Inject;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
+import org.testcontainers.junit.jupiter.Testcontainers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pl.piomin.services.domain.Department;
@@ -12,12 +16,12 @@ import pl.piomin.services.repository.DepartmentRepository;
 import pl.piomin.services.repository.EmployeeRepository;
 import pl.piomin.services.repository.OrganizationRepository;
 
-import javax.inject.Inject;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @MicronautTest
+@Testcontainers
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class RepositoryTests {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RepositoryTests.class);

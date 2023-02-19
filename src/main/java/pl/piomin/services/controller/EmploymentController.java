@@ -2,12 +2,12 @@ package pl.piomin.services.controller;
 
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
+import jakarta.inject.Inject;
 import pl.piomin.services.domain.Employee;
 import pl.piomin.services.dto.EmploymentDTO;
 import pl.piomin.services.repository.EmployeeRepository;
 import pl.piomin.services.repository.EmploymentRepository;
 
-import javax.inject.Inject;
 import java.util.Optional;
 import java.util.Set;
 
