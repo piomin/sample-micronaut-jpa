@@ -16,7 +16,7 @@
 
     <properties>
         <micronaut.version>3.8.5</micronaut.version>
-        <micronaut-data.version>3.9.6</micronaut-data.version>
+        <micronaut-data.version>3.10.0</micronaut-data.version>
         <jdk.version>11</jdk.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <exec.mainClass>pl.piomin.services.SampleApplication</exec.mainClass>
