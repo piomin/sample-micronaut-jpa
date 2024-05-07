@@ -12,7 +12,6 @@ import java.util.Set;
 public interface EmploymentRepository extends CrudRepository<Employment, Long> {
 
     Set<EmploymentDTO> findByEmployeeOrderByStartDesc(Employee employee);
-
     Employment findByEmployeeAndEndIsNull(Employee employee);
 
 }

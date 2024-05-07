@@ -16,7 +16,7 @@
 
     <properties>
         <micronaut.version>3.8.5</micronaut.version>
-        <micronaut-data.version>3.9.6</micronaut-data.version>
+        <micronaut-data.version>3.8.0</micronaut-data.version>
         <jdk.version>17</jdk.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <exec.mainClass>pl.piomin.services.SampleApplication</exec.mainClass>
@@ -39,14 +39,14 @@
 <!--    </dependencyManagement>-->
 
     <dependencies>
-        <dependency>
-            <groupId>io.micronaut</groupId>
-            <artifactId>micronaut-inject</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.micronaut</groupId>
-            <artifactId>micronaut-validation</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>io.micronaut</groupId>-->
+<!--            <artifactId>micronaut-inject</artifactId>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>io.micronaut</groupId>-->
+<!--            <artifactId>micronaut-validation</artifactId>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>io.micronaut.data</groupId>
             <artifactId>micronaut-data-hibernate-jpa</artifactId>
@@ -67,6 +67,7 @@
         <dependency>
             <groupId>io.micronaut</groupId>
             <artifactId>micronaut-http-server-netty</artifactId>
+            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
@@ -94,17 +95,22 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.testcontainers</groupId>
-            <artifactId>postgresql</artifactId>
-            <scope>test</scope>
-            <version>1.17.6</version>
+            <groupId>io.micronaut.testresources</groupId>
+            <artifactId>micronaut-test-resources-client</artifactId>
+            <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>org.testcontainers</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>1.17.6</version>
-            <scope>test</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.testcontainers</groupId>-->
+<!--            <artifactId>postgresql</artifactId>-->
+<!--            <scope>test</scope>-->
+<!--            <version>1.17.6</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.testcontainers</groupId>-->
+<!--            <artifactId>junit-jupiter</artifactId>-->
+<!--            <version>1.17.6</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
     </dependencies>
 
     <build>
@@ -112,14 +118,14 @@
             <plugin>
                 <groupId>io.micronaut.build</groupId>
                 <artifactId>micronaut-maven-plugin</artifactId>
-                <configuration>
-                    <testResourcesDependencies>
-                        <dependency>
-                            <groupId>io.micronaut.testresources</groupId>
-                            <artifactId>micronaut-test-resources-jdbc-postgresql</artifactId>
-                        </dependency>
-                    </testResourcesDependencies>
-                </configuration>
+<!--                <configuration>-->
+<!--                    <testResourcesDependencies>-->
+<!--                        <dependency>-->
+<!--                            <groupId>io.micronaut.testresources</groupId>-->
+<!--                            <artifactId>micronaut-test-resources-jdbc-postgresql</artifactId>-->
+<!--                        </dependency>-->
+<!--                    </testResourcesDependencies>-->
+<!--                </configuration>-->
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -132,7 +138,7 @@
                         <arg>-Amicronaut.processing.group=pl.piomin.services</arg>
                         <arg>-Amicronaut.processing.module=sample-micronaut-jpa</arg>
                     </compilerArgs>
-                    <annotationProcessorPaths>
+                    <annotationProcessorPaths combine.self="override">
                         <path>
                             <groupId>io.micronaut</groupId>
                             <artifactId>micronaut-inject-java</artifactId>

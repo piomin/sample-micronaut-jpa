@@ -20,12 +20,17 @@ public class SampleService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(SampleService.class);
 
-    @Inject
     DepartmentRepository departmentRepository;
-    @Inject
     EmployeeRepository employeeRepository;
-    @Inject
     EmploymentRepository employmentRepository;
+
+    public SampleService(DepartmentRepository departmentRepository,
+                         EmployeeRepository employeeRepository,
+                         EmploymentRepository employmentRepository) {
+        this.departmentRepository = departmentRepository;
+        this.employeeRepository = employeeRepository;
+        this.employmentRepository = employmentRepository;
+    }
 
     @Transactional
     public void changeJob(Long employeeId, Long targetDepartmentId) {

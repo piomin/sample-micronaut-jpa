@@ -12,11 +12,8 @@ import java.util.Set;
 public interface EmployeeRepository extends CrudRepository<Employee, Long> {
 
     Set<EmployeeDTO> findBySalaryGreaterThan(int salary);
-
     Set<EmployeeDTO> findByOrganization(Organization organization);
-
     int findAvgSalaryByAge(int age);
-
     int findAvgSalaryByOrganization(Organization organization);
 
 }

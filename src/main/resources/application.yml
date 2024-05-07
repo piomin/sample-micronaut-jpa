@@ -5,17 +5,19 @@ micronaut:
 jackson:
   bean-introspection-module: true
 
-datasources:
-  default:
+#datasources:
+#  default:
 #    url: jdbc:postgresql://192.168.99.100:5432/predator?ssl=false
 #    driverClassName: org.postgresql.Driver
 #    username: predator
 #    password: predator123
 #    schema-generate: CREATE_DROP
-    dialect: PostgreSQL
+#    dialect: PostgreSQL
 
 jpa:
   default:
+    packages-to-scan:
+      - 'pl.piomin.services.domain'
     properties:
       hibernate:
         hbm2ddl:
