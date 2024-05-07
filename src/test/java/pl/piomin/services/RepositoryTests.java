@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
-//import org.testcontainers.junit.jupiter.Testcontainers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pl.piomin.services.domain.Department;
@@ -20,7 +19,6 @@ import java.util.Arrays;
 import java.util.List;
 
 @MicronautTest
-//@Testcontainers
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class RepositoryTests {
 

@@ -1,5 +1,6 @@
 package pl.piomin.services.controller;
 
+import io.micronaut.core.annotation.NonNull;
 import io.micronaut.http.annotation.Body;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
@@ -7,8 +8,6 @@ import io.micronaut.http.annotation.Post;
 import jakarta.inject.Inject;
 import pl.piomin.services.domain.Organization;
 import pl.piomin.services.repository.OrganizationRepository;
-
-import javax.validation.constraints.NotNull;
 import java.util.Optional;
 
 @Controller("organizations")
@@ -24,7 +23,7 @@ public class OrganizationController {
     }
 
     @Get("/name/{name}")
-    public Optional<Organization> findOrganization(@NotNull String name) {
+    public Optional<Organization> findOrganization(@NonNull String name) {
         return repository.findByName(name);
     }
 

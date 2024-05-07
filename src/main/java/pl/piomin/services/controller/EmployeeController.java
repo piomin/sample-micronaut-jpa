@@ -16,12 +16,15 @@ import java.util.Set;
 @Controller("employees")
 public class EmployeeController {
 
-    @Inject
     EmployeeRepository repository;
-    @Inject
     OrganizationRepository organizationRepository;
-    @Inject
     SampleService service;
+
+    public EmployeeController(EmployeeRepository repository, OrganizationRepository organizationRepository, SampleService service) {
+        this.repository = repository;
+        this.organizationRepository = organizationRepository;
+        this.service = service;
+    }
 
     @Get("/salary/{salary}")
     public Set<EmployeeDTO> findEmployeesBySalary(int salary) {

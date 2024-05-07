@@ -14,10 +14,13 @@ import java.util.Set;
 @Controller("employments")
 public class EmploymentController {
 
-    @Inject
     EmployeeRepository employeeRepository;
-    @Inject
     EmploymentRepository repository;
+
+    public EmploymentController(EmployeeRepository employeeRepository, EmploymentRepository repository) {
+        this.employeeRepository = employeeRepository;
+        this.repository = repository;
+    }
 
     @Get("/employee/{employeeId}")
     public Set<EmploymentDTO> findByEmployee(Long employeeId) {

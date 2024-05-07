@@ -1,8 +1,10 @@
 package pl.piomin.services.dto;
 
 import io.micronaut.core.annotation.Introspected;
+import io.micronaut.serde.annotation.Serdeable;
 
-@Introspected
+//@Introspected
+@Serdeable
 public class OrganizationDTO {
 
     private String name;

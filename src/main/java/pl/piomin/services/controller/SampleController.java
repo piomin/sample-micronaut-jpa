@@ -1,5 +1,6 @@
 package pl.piomin.services.controller;
 
+import io.micronaut.core.annotation.NonNull;
 import io.micronaut.http.annotation.Body;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
@@ -14,7 +15,6 @@ import pl.piomin.services.repository.EmployeeRepository;
 import pl.piomin.services.repository.OrganizationRepository;
 import pl.piomin.services.service.SampleService;
 
-import javax.validation.constraints.NotNull;
 import java.util.Optional;
 
 @Controller("/api")
@@ -40,12 +40,12 @@ public class SampleController {
     }
 
     @Get("/organization/name/{name}")
-    public Optional<Organization> findOrganization(@NotNull String name) {
+    public Optional<Organization> findOrganization(@NonNull String name) {
         return organizationRepository.findByName(name);
     }
 
     @Get("/organization/{id}")
-    public Optional<Organization> findOrganizationById(@NotNull Long id) {
+    public Optional<Organization> findOrganizationById(@NonNull Long id) {
         return organizationRepository.findById(id);
     }
 

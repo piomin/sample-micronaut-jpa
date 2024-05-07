@@ -11,7 +11,7 @@ import pl.piomin.services.repository.DepartmentRepository;
 import pl.piomin.services.repository.EmployeeRepository;
 import pl.piomin.services.repository.EmploymentRepository;
 
-import javax.transaction.Transactional;
+import jakarta.transaction.Transactional;
 import java.util.Date;
 import java.util.Optional;
 

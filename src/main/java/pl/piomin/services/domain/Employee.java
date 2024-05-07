@@ -1,6 +1,6 @@
 package pl.piomin.services.domain;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.Set;
 
 @Entity
